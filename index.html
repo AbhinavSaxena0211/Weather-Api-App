@@ -60,7 +60,8 @@
     async function getWeather() {
       const city = document.getElementById("city").value || "London";
       const apiKey = "d512adc677604b78b1c85949251908"; // your key
-      const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`;
+      const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=yes`;
+
 
       try {
         const response = await fetch(url);
@@ -81,3 +82,4 @@
   </script>
 </body>
 </html>
+
