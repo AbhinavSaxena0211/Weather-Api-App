@@ -59,7 +59,7 @@
   <script>
     async function getWeather() {
       const city = document.getElementById("city").value || "London";
-      const apiKey = "d512adc677604b78b1c85949251908"; // your key
+      const apiKey = "d512adc677604b78b1c85949251908"; 
       const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(city)}&aqi=yes`;
 
 
@@ -82,4 +82,5 @@
   </script>
 </body>
 </html>
+
 
